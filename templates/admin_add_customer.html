@@ -1,0 +1,22 @@
+{% extends 'base_admin.html' %}
+
+{% block title %} Add New customer {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row"> 
+        <div class="col-7">
+<form method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">customer Name</label>
+      <input type="text" name="customername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn" style="background-color:rgb(167, 218, 204);">Add</button>
+</form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base_admin.html' %}
+
+{% block title %} Delete Product {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row"> 
+        <div class="col-7">
+<form method="POST" enctype="multipart/form-data">
+ 
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Product Id</label>
+      <input type="float" name="productId" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn" style="background-color:rgb(167, 218, 204);">Delete</button>
+</form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

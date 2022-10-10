@@ -1,0 +1,32 @@
+{% extends 'base_admin.html' %}
+
+{% block title %} Add New Product {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row"> 
+        <div class="col-7">
+<form method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label" style="color:rgb(15, 18, 18);">Product Name</label>
+      <input type="text" name="productname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label" style="color:rgb(14, 17, 16);">Price</label>
+      <input type="float" name="price" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" style="color:rgb(23, 22, 21);">Image</label>
+        <input type="file" name="image" class="form-control" id="exampleInputPassword1">
+      </div>
+    <button type="submit" class="btn" style="background-color:rgb(167, 218, 204);">Add</button>
+</form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

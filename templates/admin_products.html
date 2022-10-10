@@ -1,0 +1,24 @@
+{% extends 'base_admin.html' %}
+
+{% block title %} SHOP NOW {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+      {% for product in products %}
+      <div class="col-4">
+        <div class="card">
+          <img src="{{url_for('static',filename='uploads/'+product.imagefile)}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.productname}}</h5>
+            <p class="card-text">{{product.price}} EGP</p>
+           <a href="{{url_for('admin_update',productid=product.productid)}}"  style="background-color:rgb(167, 218, 204);" class="btn btn-outline-secondary">Edit</a>
+           <a href="{{url_for('admin_delete',productid=product.productid)}}" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>  
+      {% endfor %}  
+  </div>
+</div>    
+{% endblock %}
+
+

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} SHOP NOW {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+      {% for product in products %}
+      <div class="col-4">
+        <div class="card">
+          <img src="{{url_for('static',filename='uploads/'+product.imagefile)}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.productname}}</h5>
+            <p class="card-text">{{product.price}} EGP</p>
+            <form method="POST">
+              <button type="submit"  name="productid" value="{{product.productid}}" class="btn btn-secondary" style="background-color:rgb(167, 218, 204);">Buy</button>
+            </form>
+          </div>
+        </div>
+      </div>  
+      {% endfor %}  
+  </div>
+</div>    
+{% endblock %}
+
